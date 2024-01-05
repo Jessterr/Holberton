@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script will define log file and use ark to pull data from log file
+
+log_file="./apache-access.log"
+awk '{print $1, $9}' "$log_file"

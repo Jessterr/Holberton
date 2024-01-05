@@ -1,0 +1,47 @@
+.TH man_1_simple_shell "November 28, 2023" "version 1.0"
+
+.SH NAME
+simple_shell
+
+.SH SYNOPSIS
+
+.SH DESCRIPTION
+Simple_shell is a project dedicated to our studies. My partner and I, have tried to mimic the behavior of the original shell language. Shell is a command language interpreter that executes commands read from the standard input or from a file. This simple_shell project isn't intended to be an exact imitation of the original Unix shell.
+
+.SH OVERVIEW
+This was made to complete the C simple_shell project at Holberton. The README.md file provided to give a better documentation of this program.
+
+.SH FEATURES
+* This program displays a prompt and waits for the user to input a command.A command line always ends with a new line (when user pushes the ENTER key).
+
+* The promt is displayed each time a command has been executed.
+
+* When the user enters 'exit', the program will end and reutrn the status to 0.
+
+* When the user enters 'exit [status]', the program will end and return the imputed status, where status is a value from 0 to 1024.
+
+* The user can end the program by using 'Ctrl+D' (end of file).
+
+* The shell handles command line arguments and pathways.
+
+* The program will not wuit when the user inputs '^C' (Ctrl+C).
+
+* The program prints the current enviroment when the user tpes 'env'.
+
+* This program executes the most comon shell commands as ls, grep, find, pwd, rm, cp, mv, env, history, etc... with arguments.
+
+* If an executable cannot be found, it prints an error message and displays the promt again.
+
+* This shell supports commentaries using #.
+
+* This program does NOT supprt wildcard characters such as ls *.dat in paramenters (or commands).
+
+* This shell does not support pipes (|), shell logical operatos as && or ||, neither commands seperator ;.
+
+.SH EXAMPLES
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+Kyle Headley, Jesse Brumley

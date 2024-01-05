@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script is to display Best School 10x using until
+i=0
+until [ $i -eq 10 ]
+do
+	echo "Best School"
+	i=$((i+1))
+done

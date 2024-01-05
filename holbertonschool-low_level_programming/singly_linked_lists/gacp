@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if a commit message is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <commit_message>"
+    exit 1
+fi
+
+# Make sure you are in a Git repository
+if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "Not in a Git repository. Please navigate to a Git repository directory."
+    exit 1
+fi
+
+# Add all changes, commit with the provided message, and push
+git add .
+git commit -m "$1"
+git push

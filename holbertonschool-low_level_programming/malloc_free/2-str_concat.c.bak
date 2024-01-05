@@ -1,0 +1,45 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "main.h"
+
+/**
+ * str_concat - combines two strings
+ * @s1: input 1
+ * @s2: input 2
+ * Return: null (fail) or pointer to space in memory for new string
+ */
+char *str_concat(char *s1, char *s2)
+{
+	int size1 = 0;
+	int size2 = 0;
+	int i, j;
+	char *array;
+
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	else if (s1 == NULL)
+		return (strdup(s2));
+	else if (s2 == NULL)
+		return (strdup(s1));
+
+	while (s1[size1] != '\0')
+		size1++;
+	while (s2[size2] != '\0')
+		size2++;
+
+	array = (char *)malloc(size1 + size2 + 1);
+
+	if (array == NULL)
+		return (NULL);
+
+	for (i = 0; i < size1; i++)
+		array[i] = s1[i];
+
+	for (j = 0; j < size2; j++)
+		array[size1 + j] = s2[j];
+
+	array[size1 + size2] = '\0';
+
+	return (array);
+}
